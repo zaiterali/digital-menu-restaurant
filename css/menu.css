@@ -1,0 +1,634 @@
+:root {
+  /* --color-body: #EAEDF3; */
+  --color-ui--elements-cta-red: #e60045;
+  --color-ui--favorite: #ff6966;
+  --color-ui--error-red: #c24242;
+  --color-elements-violet: #604df5;
+  --lighter-blue-text: #1a3469;
+  --darker-blue-text: #142950;
+  --loulou-purple-text: #490b3d;
+  --maroon-active-text: #f43601;
+  --color-white: #fff;
+  --maroon-flush-text: #bd1e51;
+  --light-orange-price: #f4504d;
+  --light-purple: #8629c1;
+  --light-red: #cb4c78;
+  --light-blue: #032d80c3;
+  --color-body: #eaedf3;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: hikou;
+  src: url("../assets/fonts/hikou/Hikou\ Rough.otf");
+}
+
+@font-face {
+  font-family: amsi-regular;
+  src: url("../assets/fonts/amsi-pro/AmsiPro-Regular.otf");
+}
+
+@font-face {
+  font-family: amsi-bold;
+  src: url("../assets/fonts/amsi-pro/AmsiPro-Bold.otf");
+}
+
+@font-face {
+  font-family: amsi-bold-italic;
+  src: url("../assets/fonts/amsi-pro/AmsiPro-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: amsi-italic;
+  src: url("../assets/fonts/amsi-pro/AmsiPro-XLightItalic.otf");
+}
+
+body {
+  font-family: amsi-regular;
+  background-color: var(--color-body);
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.culture_icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 529px) {
+  .culture_icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+header {
+  width: 100%;
+  z-index: 1000;
+  transition: 0.4s;
+  background-color: white;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.menu-category_container {
+  transition: margin-top 0.5s;
+}
+
+.arrow_back {
+  color: #162f54;
+  font-size: 1.2rem;
+}
+
+.phone_icon {
+  color: var(--lighter-blue-text);
+  font-size: 1.2rem;
+}
+
+/* -Search- */
+.search_container {
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.search_container:hover {
+  width: 200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-white);
+}
+
+.search_container:hover input {
+  width: 150px;
+}
+
+.search_container input {
+  width: 0;
+  outline: none;
+  border: none;
+  transition: 0.7s ease-in-out;
+  background: transparent;
+  color: var(--lighter-blue-text);
+  font-weight: 100;
+}
+
+.search_icon .fa-magnifying-glass {
+  color: #162f54;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: var(--lighter-blue-text);
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .phone_icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-hover .district_col {
+    flex: 2;
+  }
+  .header-hover .search_col {
+    flex: 8;
+  }
+  .header-hover .search_container input {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .header-hover .search_container {
+    width: 180px;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .hello .district_col {
+    flex: 4 !important;
+  }
+  .hello .search_col {
+    flex: 6 !important;
+  }
+  .hello .search_container input {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  .hello .search_container {
+    width: 180px !important;
+  }
+}
+
+/* Menu category carousel */
+
+.menu-category_container {
+  z-index: 1;
+  background: linear-gradient(to right, #162f54, #d75639);
+  width: 100%;
+  color: white !important;
+}
+
+.menu-category_name {
+  font-size: 2rem;
+  font-family: hikou;
+  color: var(--darker-blue-text);
+}
+
+@media (max-width: 767px) {
+  .menu-category_name {
+    font-size: 1.5rem;
+  }
+}
+
+.carousel-scroll_container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 1;
+}
+
+.carousel-scroll-category {
+  display: inline-block;
+}
+
+.menu-category_item {
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+.carousel-scroll_container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-scroll_wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 1000;
+}
+
+.carousel-scroll_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-category {
+  display: inline-block;
+}
+
+.menu-category_item.active {
+  color: var(--maroon-active-text);
+}
+
+/* Food Options */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  margin: 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-options_container {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.food-options_icon {
+  width: 25px;
+  height: 25px;
+}
+
+.food-options_item {
+  color: var(--lighter-blue-text);
+  font-weight: 100;
+  font-size: 1rem;
+}
+.shisha-item {
+  color: var(--lighter-blue-text);
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10px;
+  }
+  .food-options_item {
+    font-size: 0.8rem;
+  }
+  .shisha-item {
+    font-size: 0.8rem;
+  }
+}
+
+/* New item */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+}
+
+.new-item_card {
+  width: 250px;
+  height: 380px;
+  background-color: rgb(234, 234, 234);
+
+  padding: 25px 15px;
+}
+
+@media screen and (max-width: 529px) {
+  .new-item_card {
+    width: 250px;
+    height: 230px;
+    background-color: white;
+
+    padding: 25px 15px;
+  }
+}
+
+.carousel_caption {
+  right: 50px;
+  bottom: 60px;
+  text-align: left;
+  color: var(--lighter-blue-text);
+  width: 350px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-body);
+}
+
+.carousel-caption_title {
+  font-family: amsi-bold;
+  font-size: 1rem;
+  color: var(--darker-blue-text);
+}
+.carousel-caption_subtitle {
+  font-family: amsi-italic;
+  font-size: 0.8rem !important;
+}
+
+@media screen and (max-width: 529px) {
+  .carousel_caption {
+    width: 130px;
+    height: 50px;
+    bottom: 40px;
+    right: 30px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .carousel-caption_title {
+    font-size: 0.8rem;
+  }
+
+  .carousel-caption_subtitle {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 529px) {
+  .new-item_card {
+    width: 250px;
+    height: 230px;
+    background-color: white;
+
+    padding: 25px 15px;
+  }
+}
+
+/* Cards */
+.preview-card-food_image img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.preview-card_title {
+  font-family: amsi-bold;
+  font-size: 1rem;
+  color: var(--darker-blue-text);
+}
+
+.preview-card_text {
+  color: var(--lighter-blue-text);
+  font-weight: 100;
+  font-size: 1.5rem;
+  height: 90px;
+}
+
+.price {
+  color: var(--maroon-flush-text);
+}
+
+.card {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+@media screen and (max-width: 300px) {
+  .img-fluid.rounded-start {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .preview-card_title {
+    font-size: 1rem;
+  }
+
+  .preview-card_text {
+    font-size: 0.8rem;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 529px) {
+  .img-fluid.rounded-start {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .preview-card_title {
+    font-size: 1.2rem;
+  }
+
+  .preview-card_text {
+    font-size: 0.8rem;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .img-fluid.rounded-start {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .preview-card_title {
+    font-size: 1rem;
+  }
+
+  .preview-card_text {
+    font-size: 0.8rem;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .preview-card_text {
+    font-size: 1rem;
+  }
+  .preview-card_title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Modal */
+
+.modal-food-options_icon {
+  width: 30px;
+  height: 30px;
+}
+
+.modal-content {
+  background-color: var(--color-body);
+}
+
+.card-detail-modal_title {
+  font-size: 1rem;
+  color: var(--darker-blue-text);
+  font-family: hikou;
+}
+
+.card-detail-modal_text {
+  color: var(--lighter-blue-text);
+  font-size: 1rem;
+}
+
+.card-detail-modal_subtitle {
+  color: var(--darker-blue-text);
+  font-size: 1.3rem;
+}
+
+.additional_info {
+  color: var(--light-orange-price);
+}
+
+.time_badge {
+  top: 15px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: var(--light-orange-price);
+  color: white;
+}
+
+.food_badge {
+  bottom: 2px;
+  right: 10px;
+}
+
+.food_badge ul {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 110px;
+}
+
+.food_badge li {
+  padding-right: 5px;
+}
+
+.calories {
+  color: var(--lighter-blue-text);
+}
+
+.submit_btn {
+  background-color: var(--light-blue);
+  color: var(--color-body);
+}
+
+@media screen and (max-width: 529px) {
+  .card-detail-modal_title {
+    font-size: 1.3rem;
+  }
+  .time_badge {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+  .card-detail-modal_title {
+    font-size: 1.5rem;
+  }
+
+  .card-detail-modal_text {
+    font-size: 1.1rem;
+  }
+
+  .card-detail-modal_subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* This is the css for all recommended products */
+/* Recommended */
+
+.suggestion_card {
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+}
+
+.suggestion-card_body {
+  font-size: 1.2rem;
+  background-color: var(--color-body);
+}
+
+.suggestions_subtitle {
+  color: var(--color-body);
+  background: linear-gradient(to right, #162f54, #d75639);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 529px) {
+  .suggestions_subtitle {
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .suggestion-card_body {
+    font-size: 0.8rem;
+  }
+}
+
+.suggestion-card_title {
+  color: var(--lighter-blue-text);
+}
+
+.suggestion-card_price {
+  color: var(--maroon-flush-text);
+}
+
+@media screen and (max-width: 768px) {
+  .suggestion_card {
+    width: 12rem !important;
+  }
+
+  .suggestion_card img {
+    height: 150px !important;
+  }
+}
+
+footer {
+  text-align: center;
+  color: var(--darker-blue-text);
+}
